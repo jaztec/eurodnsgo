@@ -38,7 +38,7 @@ type client struct {
 	callSchedule chan scheduledCall
 }
 
-// Schedule schedules a request to be send to the eurodnsgo server
+// Schedule schedules a request to be send to the EuroDNS server
 func (c *client) Schedule(sr *SoapRequest) (chan []byte, error) {
 	r := make(chan []byte, 1)
 	// will be processed inside client::run
